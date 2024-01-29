@@ -8,7 +8,9 @@ I live on 123 Main St. Apt. #456, and I was born on January 11th, 1990. I have a
 Please give me a call or send me an email to confirm. In case the dates are unavailable, please set up a meeting sometime in June. I would love June 19h.
 Thank you!
 
-==================================================================================================================================================================
+
+
+
 TASK 2:
 
 Using libraries by your choice (hint - requests & BeautifulSoup4 libraries should do the job) write a Python script that:
@@ -22,7 +24,8 @@ Using libraries by your choice (hint - requests & BeautifulSoup4 libraries shoul
 
     e. Add the following functionality to the script - upon each run it should compare the latest downloaded table with the one saved in the CSV file and rewrites the CSV file only if the tables are different.
 
-==================================================================================================================================================================
+
+
 TASK 3:
 
 Using libraries by your choice (hint - requests & BeautifulSoup4 libraries should do the job) write a Python script that:
