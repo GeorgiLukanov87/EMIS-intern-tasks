@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>random-pop</title>
+</head>
+
+<body>
+    <div class="home-intro"></div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", randomImage);
+    
+    function randomImage() {
+        let usedIndices = JSON.parse(localStorage.getItem('usedIndices')) || [0, 1, 2, 3, 4];
+        console.log(usedIndices)
+
+        let images = [
+            '../images/screen-0.png',
+            '../images/screen-1.png',
+            '../images/screen-2.png',
+            '../images/screen-3.png',
+            '../images/screen-4.png'
+        ];
+
+        let size = images.length;
+        let index = Math.floor(size * Math.random());
+        console.log(index);
+        let element = document.getElementsByClassName('home-intro');
+
+        if (usedIndices.includes(usedIndices.indexOf(index))) {
+            console.log('true')
+            element[0].style["background-image"] = "url(" + images[usedIndices.pop(index)] + ")";
+
+            if (usedIndices.length <=1){
+                usedIndices = [0, 1, 2, 3, 4];
+            }
+
+        } else {
+            console.log('false')
+            element[0].style["background-image"] = "url(" + images[usedIndices.pop(0)] + ")";
+            usedIndices = [0, 1, 2, 3, 4];
+        }
+
+        localStorage.setItem('usedIndices', JSON.stringify(usedIndices));
+    }
+
+</script>
+
+</html>

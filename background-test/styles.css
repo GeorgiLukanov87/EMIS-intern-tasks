@@ -1,0 +1,10 @@
+.home-intro {
+    background-image: url("https://unsplash.imgix.net/photo-1428278953961-a8bc45e05f72?fit=crop&amp;fm=jpg&amp;h=500&amp;q=75&amp;w=1050");
+    background-size: cover;
+    height: 100%;
+    color: white;
+    text-align: center;
+  }
+  body, html{
+    height: 100%;
+  }
